@@ -12,7 +12,7 @@ fanbeams = load_cameras()
 
 # 시각화 위해 임의로 조정 ... 나중에 주석 처리
 for i in range(len(fanbeams)):
-    fanbeams[i].DSD = fanbeams[i].DSD + 1000 
+    fanbeams[i].DSD = fanbeams[i].DSD +3000
 
 image = draw_image(fanbeams[0])
 for i in range(1, len(fanbeams)): 
