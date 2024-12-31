@@ -1,54 +1,117 @@
-<div align="center">   
+<p align="center">
 
-# 3D X-RAY Calibration
-</div>
+  <h1 align="center">9-view X-ray Fanbeam Calibration</h1>
+  <p align="center">
+    <a href="https://www.cubox.ai/"><strong>CUBOX AI Lab</strong></a><sup></sup>
+  <div align="center">
+    <img src="./figs/teaser.png" alt="Teaser Image" width="100%">
+  </div>
 
-# Examples
+  <p align="center">
+    <a href='https://github.com/yc4ny/Fanbeam-Calibration'>
+      <img src='https://img.shields.io/badge/GitHub-Code-black?style=flat&logo=github&logoColor=white'></a>
+    <a href="" target='_blank'>
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=yc4ny.Fanbeam-Calibration&left_color=gray&right_color=orange">
+    </a>
+  </p>
+</p>
 
-## Beads detection 
+---
 
-    python find_beads.py
+## Overview
+**9-view X-Ray Fanbeam Calibration** provides tools for precise calibration of X-ray imaging systems. These tools enable researchers to detect objects, align calibration setups, and visualize 3D data. Below are the key functionalities and their usage instructions.
 
-## Calibration 
+## Features
+- **Bead Detection:** Automatic bead localization in X-ray images.
+- **Calibration:** Multi-view geometric calibration.
+- **3D Visualization:** Open3D-based interactive viewer.
+- **Box Fitting:** Bounding box fitting for 3D structures.
+- **Triangulation:** Multi-view triangulation of detected objects.
+- **RANSAC Visual Hull:** Robust model fitting for 3D structures.
 
-    python calibration.py 
+---
 
-![Example GIF](figs/calibration.gif)
+## Examples
 
-## Open3d viewer
+### Bead Detection
+```bash
+python find_beads.py
+```
+<p align="center">
+  <img src="figs/calibration.gif" alt="Beads Detection Example" width="80%">
+</p>
 
-    python viewer_o3d.py
+### Calibration
+```bash
+python calibration.py
+```
+<p align="center">
+  <img src="figs/calibration.gif" alt="Calibration Example" width="80%">
+</p>
 
-![IMAGE](figs/viewer_3d.png)
+### Open3D Viewer
+```bash
+python viewer_o3d.py
+```
+<p align="center">
+  <img src="figs/viewer_3d.png" alt="Open3D Viewer Example" width="80%">
+</p>
 
-## Box fitting 
+### Box Fitting
+```bash
+python fit_bbox.py
+```
+<p align="center">
+  <img src="figs/visualhull.gif" alt="Box Fitting Example" width="80%">
+  <img src="figs/bbox2d.png" alt="Bounding Box Example" width="80%">
+</p>
 
-    python fit_bbox.py
+### Triangulation
+```bash
+python triangulation.py
+```
+<p align="center">
+  <img src="figs/triangulation.png" alt="Triangulation Example" width="80%">
+</p>
 
-![IMAGE](figs/visualhull.gif)
-![IMAGE](figs/bbox2d.png)
+### VisualHull RANSAC
+```bash
+python ransac_visualhull.py
+```
+<p align="center">
+  <img src="figs/ransac.gif" alt="RANSAC Example" width="80%">
+</p>
 
-## Triangulation 
+---
 
-    python triangulation.py
+## Installation
+1. Create and activate a virtual environment:
+   ```bash
+   conda create -n xray_calib python=3.10
+   conda activate xray_calib
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-![IMAGE](figs/triangulation.png)
+---
 
-## VisualHull RANSAC
+## Citation
+If you use this project in your research, please consider citing:
 
-    python ransac_visualhull.py
+```bibtex
+@misc{fanbeamcalibration2024,
+  author = {CUBOX AI Lab},
+  title = {9-view X-ray Fanbeam Calibration},
+  year = {2024},
+  url = {https://github.com/yc4ny/Fanbeam-Calibration}
+}
+```
 
-![IMAGE](figs/ransac.gif)
+---
 
-## TODO 
-
-- [ ] Calibration 고도화 (Distortion 모델링, PNP initialization, 타원 피팅... )   
-- [ ] phantom 여러개 들어올 경우 추가 
-- [ ] RANSAC 
-- [ ] phantom 없는 데이터에서 calibration (NIA 9view 데이터...)
-- [ ] 2d label -> 3d label 생성 
-- [ ] 3d detection 모델 학습 
-- [ ] reconstruction 모델 테스트 
-- [ ] ...
-
-
+## Contact
+For questions, reach out to:
+- Technical Inquiries: [yhugestar@gmail.com](mailto:yhugestar@gmail.com)
+- Licensing: [yonwoo.choi@cubox.ai](mailto:yonwoo.choi@cubox.ai)
