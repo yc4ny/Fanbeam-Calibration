@@ -2,7 +2,7 @@
 
   <h1 align="center">9-view X-ray Fanbeam Calibration</h1>
   <p align="center">
-    <a href="https://www.cubox.ai/"><strong>CUBOX AI Lab</strong></a><sup></sup>
+    <a href="https://www.cubox.ai/"><strong>SECERN AI</strong></a><sup></sup>
   <div align="center">
     <img src="./figs/teaser.png" alt="Teaser Image" width="100%">
   </div>
